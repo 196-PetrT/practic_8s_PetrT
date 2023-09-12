@@ -9,8 +9,12 @@
 // 9 5 3 2
 // 8 4 4 2
 
-int[,] GetMatrix(int rows, int columns, int minValue = 1, int maxValue = 10)
-{
+int[,] matrix = GetMatrix(3, 4);
+PrintMatrix(matrix);
+SortMatrix(matrix);
+PrintMatrix(matrix);
+
+int[,] GetMatrix(int rows, int columns, int minValue = 1, int maxValue = 10) {
     int[,] matrix = new int[rows, columns];
     Random rand = new Random();
     for (int i = 0; i < rows; i++)
@@ -23,8 +27,7 @@ int[,] GetMatrix(int rows, int columns, int minValue = 1, int maxValue = 10)
     return matrix;
 }
 
-void PrintMatrix(int[,] matrix) // метод вывода массива на экран
-{
+void PrintMatrix(int[,] matrix) {
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
@@ -53,7 +56,3 @@ void SortMatrix(int[,] matrix)
     Console.WriteLine();
 }
 
-int[,] matrix = GetMatrix(3, 4);
-PrintMatrix(matrix);
-SortMatrix(matrix);
-PrintMatrix(matrix);
